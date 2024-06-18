@@ -12,6 +12,7 @@
 		616689932C21C97B00464D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616689922C21C97B00464D33 /* Assets.xcassets */; };
 		616689A42C21CB9800464D33 /* LoginProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689A32C21CB9800464D33 /* LoginProfileViewModel.swift */; };
 		616689A62C21CC0C00464D33 /* LoginProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689A52C21CC0C00464D33 /* LoginProfileView.swift */; };
+		616689A92C21CEBB00464D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616689A82C21CEBB00464D33 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		616689922C21C97B00464D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616689A32C21CB9800464D33 /* LoginProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileViewModel.swift; sourceTree = "<group>"; };
 		616689A52C21CC0C00464D33 /* LoginProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileView.swift; sourceTree = "<group>"; };
+		616689A82C21CEBB00464D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 		616689822C21C97A00464D33 = {
 			isa = PBXGroup;
 			children = (
+				616689A72C21CEA900464D33 /* Preview Content */,
 				6166898D2C21C97A00464D33 /* babySteps */,
 				6166898C2C21C97A00464D33 /* Products */,
 			);
@@ -102,6 +105,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		616689A72C21CEA900464D33 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				616689A82C21CEBB00464D33 /* Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616689A92C21CEBB00464D33 /* Assets.xcassets in Resources */,
 				616689932C21C97B00464D33 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +319,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"babySteps/Preview Content\"";
 				DEVELOPMENT_TEAM = 56QA9FYA3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -336,7 +347,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"babySteps/Preview Content\"";
 				DEVELOPMENT_TEAM = 56QA9FYA3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
