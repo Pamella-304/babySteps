@@ -7,3 +7,18 @@
 
 import SwiftUI
 import AuthenticationServices
+
+
+
+struct LoginProfileView: View {
+    
+    var body: some View {
+        Text("Tela de Login")
+    }
+    
+}
+
+
+#Preview {
+    LoginProfileView()
+}
