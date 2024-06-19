@@ -14,7 +14,16 @@
 		616689A62C21CC0C00464D33 /* LoginProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689A52C21CC0C00464D33 /* LoginProfileView.swift */; };
 		616689A92C21CEBB00464D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616689A82C21CEBB00464D33 /* Assets.xcassets */; };
 		616689AD2C22FEBC00464D33 /* new.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689AC2C22FEBC00464D33 /* new.swift */; };
-		616689AF2C22FEC900464D33 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689AE2C22FEC900464D33 /* model.swift */; };
+		616689AF2C22FEC900464D33 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689AE2C22FEC900464D33 /* Student.swift */; };
+		616689B12C2318CD00464D33 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689B02C2318CD00464D33 /* Class.swift */; };
+		616689B32C23190000464D33 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689B22C23190000464D33 /* Diary.swift */; };
+		616689B52C231AD500464D33 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689B42C231AD500464D33 /* Announcement.swift */; };
+		616689B72C231BCF00464D33 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689B62C231BCF00464D33 /* RoomClass.swift */; };
+		616689B92C231BEF00464D33 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689B82C231BEF00464D33 /* Child.swift */; };
+		616689BB2C231C1500464D33 /* ActivityDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BA2C231C1500464D33 /* ActivityDiary.swift */; };
+		616689BD2C231C5900464D33 /* FoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BC2C231C5900464D33 /* FoodMenu.swift */; };
+		616689BF2C231C6E00464D33 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BE2C231C6E00464D33 /* Activity.swift */; };
+		616689C12C231C8900464D33 /* SchoolUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689C02C231C8900464D33 /* SchoolUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +35,16 @@
 		616689A52C21CC0C00464D33 /* LoginProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileView.swift; sourceTree = "<group>"; };
 		616689A82C21CEBB00464D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616689AC2C22FEBC00464D33 /* new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.swift; sourceTree = "<group>"; };
-		616689AE2C22FEC900464D33 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		616689AE2C22FEC900464D33 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		616689B02C2318CD00464D33 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		616689B22C23190000464D33 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		616689B42C231AD500464D33 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		616689B62C231BCF00464D33 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
+		616689B82C231BEF00464D33 /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		616689BA2C231C1500464D33 /* ActivityDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDiary.swift; sourceTree = "<group>"; };
+		616689BC2C231C5900464D33 /* FoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenu.swift; sourceTree = "<group>"; };
+		616689BE2C231C6E00464D33 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		616689C02C231C8900464D33 /* SchoolUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +100,16 @@
 		6166899F2C21CB5300464D33 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				616689AE2C22FEC900464D33 /* model.swift */,
+				616689AE2C22FEC900464D33 /* Student.swift */,
+				616689B02C2318CD00464D33 /* Class.swift */,
+				616689B22C23190000464D33 /* Diary.swift */,
+				616689B42C231AD500464D33 /* Announcement.swift */,
+				616689B62C231BCF00464D33 /* RoomClass.swift */,
+				616689B82C231BEF00464D33 /* Child.swift */,
+				616689BA2C231C1500464D33 /* ActivityDiary.swift */,
+				616689BC2C231C5900464D33 /* FoodMenu.swift */,
+				616689BE2C231C6E00464D33 /* Activity.swift */,
+				616689C02C231C8900464D33 /* SchoolUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,11 +217,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				616689A42C21CB9800464D33 /* LoginProfileViewModel.swift in Sources */,
-				616689AF2C22FEC900464D33 /* model.swift in Sources */,
+				616689AF2C22FEC900464D33 /* Student.swift in Sources */,
+				616689BF2C231C6E00464D33 /* Activity.swift in Sources */,
+				616689B12C2318CD00464D33 /* Class.swift in Sources */,
+				616689B52C231AD500464D33 /* Announcement.swift in Sources */,
+				616689B92C231BEF00464D33 /* Child.swift in Sources */,
 				616689912C21C97A00464D33 /* ContentView.swift in Sources */,
 				616689A62C21CC0C00464D33 /* LoginProfileView.swift in Sources */,
+				616689C12C231C8900464D33 /* SchoolUser.swift in Sources */,
 				6166898F2C21C97A00464D33 /* babyStepsApp.swift in Sources */,
+				616689BB2C231C1500464D33 /* ActivityDiary.swift in Sources */,
 				616689AD2C22FEBC00464D33 /* new.swift in Sources */,
+				616689B32C23190000464D33 /* Diary.swift in Sources */,
+				616689B72C231BCF00464D33 /* RoomClass.swift in Sources */,
+				616689BD2C231C5900464D33 /* FoodMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
