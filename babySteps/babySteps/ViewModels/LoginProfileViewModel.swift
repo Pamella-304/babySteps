@@ -8,3 +8,7 @@
 import SwiftUI
 import AuthenticationServices
 
+@Observable
+class LoginProfileViewModel {
+   
+}
