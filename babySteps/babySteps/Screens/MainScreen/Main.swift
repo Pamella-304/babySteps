@@ -11,7 +11,7 @@ struct Main: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var visibility: NavigationSplitViewVisibility = .all
     @State private var selectedMenu: MainMenu? = nil
-    @State private var selectedClass: UUID? = nil
+    @State private var selectedClass: String? = nil
 
 
     var body: some View {
@@ -56,17 +56,17 @@ struct Main: View {
     Main()
 }
 
-struct Child: Identifiable {
-    let id = UUID()
-    var name: String
-    var image: String = "childPlaceHolder"
-}
-
-struct RoomClass: Identifiable, Hashable {
-    let id = UUID()
-    var name: String
-    var shift: String
-}
+//struct Child: Identifiable {
+//    let id = UUID()
+//    var name: String
+//    var image: String = "childPlaceHolder"
+//}
+//
+//struct RoomClass: Identifiable, Hashable {
+//    let id = UUID()
+//    var name: String
+//    var shift: String
+//}
 
 enum MainMenu: Hashable  {
     case mural, atividades, chat, perfil

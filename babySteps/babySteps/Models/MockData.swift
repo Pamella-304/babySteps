@@ -15,11 +15,18 @@ struct MockData {
         MainMenu.perfil
     ]
 
-    var classes = [RoomClass(name: "Turma A", shift: "Manhã"),
-                   RoomClass(name: "Turma B", shift: "Tarde"),
-                   RoomClass(name: "Turma C", shift: "Noite")]
+    var classes = [
+        Classroom(className: "Turma A", teachers: [UUID()], students: [
+            Student(name: "", gender: "", address: "", birthDate: "", age: "", mainPhone: "", otherPhone: "", ingressDate: "", foodRestrictions: [""], allergies: [""], bloodType: "", preferredHospital: "", missingVaccines: [""], studentPhoto: "", studentClass: "", firstResponsible: "", secondaryResponsible: "", email: "", password: "", parentID: "", schoolID: "")
+        ], shift: "Manha", activityDiary: [Date(): Diary(id: "null", date: "null", attendanceObservation: "null")]),
+        Classroom(className: "Turma B", teachers: [UUID()], students: [
+            Student(name: "", gender: "", address: "", birthDate: "", age: "", mainPhone: "", otherPhone: "", ingressDate: "", foodRestrictions: [""], allergies: [""], bloodType: "", preferredHospital: "", missingVaccines: [""], studentPhoto: "", studentClass: "", firstResponsible: "", secondaryResponsible: "", email: "", password: "", parentID: "", schoolID: "")
+        ], shift: "Tarde", activityDiary: [Date(): Diary(id: "null", date: "null", attendanceObservation: "null")]),
+        Classroom(className: "Turma C", teachers: [UUID()], students: [
+            Student(name: "", gender: "", address: "", birthDate: "", age: "", mainPhone: "", otherPhone: "", ingressDate: "", foodRestrictions: [""], allergies: [""], bloodType: "", preferredHospital: "", missingVaccines: [""], studentPhoto: "", studentClass: "", firstResponsible: "", secondaryResponsible: "", email: "", password: "", parentID: "", schoolID: "")
+        ], shift: "Noite", activityDiary: [Date(): Diary(id: "null", date: "null", attendanceObservation: "null")]),
+    ]
 
 
 
-    var chidls = [Child(name: "Joao"),Child(name: "Maria"),Child(name: "Jose"), Child(name: "Felipe")]
 }

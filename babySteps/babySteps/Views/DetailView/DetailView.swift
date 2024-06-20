@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
 
-    @Binding var selectedClass: UUID?
+    @Binding var selectedClass: String?
     @Binding var selectedMenu: MainMenu?
 
     var body: some View {
@@ -25,5 +25,5 @@ struct DetailView: View {
 
 
 #Preview {
-    DetailView(selectedClass: .constant(UUID()), selectedMenu: .constant(.atividades))
+    DetailView(selectedClass: .constant("adaosndas"), selectedMenu: .constant(.atividades))
 }

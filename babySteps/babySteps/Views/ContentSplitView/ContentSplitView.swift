@@ -11,10 +11,10 @@ import SwiftUI
 
 struct ContentSplitView: View {
     @State private var searchText = ""
-    @Binding var selectedClass: UUID?
+    @Binding var selectedClass: String?
     var body: some View {
         VStack {
-            ForEach(MockData().chidls) { child in
+            ForEach(MockData().classes[0].students, id:\.id) { student in
                 HStack {
                     AsyncImage(url: URL(string: "")) { image in
                         image.resizable()
@@ -24,7 +24,7 @@ struct ContentSplitView: View {
                             .clipShape(Circle())
                             .frame(width: 50, height: 50)
                     }
-                    Text(child.name)
+                    Text(student.name)
                     Spacer()
                 }
             }
@@ -38,5 +38,5 @@ struct ContentSplitView: View {
 }
 
 #Preview {
-    ContentSplitView(selectedClass: .constant(UUID()))
+    ContentSplitView(selectedClass: .constant("Akanskddoskds"))
 }

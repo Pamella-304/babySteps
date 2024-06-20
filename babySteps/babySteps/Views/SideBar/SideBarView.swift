@@ -10,7 +10,7 @@ import SwiftUI
 struct SideBarView: View {
 
     @Binding var selectedMenu: MainMenu?
-    @Binding var selectedClass: UUID?
+    @Binding var selectedClass: String?
 
     var body: some View {
         VStack{
@@ -31,10 +31,10 @@ struct SideBarView: View {
                 Section("Your Classes") {
                     ForEach(MockData().classes, id: \.id) { roomClass in
                         Button {
-                            selectedClass = roomClass.id
+                            selectedClass = roomClass.className
                         } label: {
                             HStack {
-                                Label(roomClass.name, systemImage: "rectangle.inset.filled.and.person.filled")
+                                Label(roomClass.className, systemImage: "rectangle.inset.filled.and.person.filled")
                                 Spacer()
                                 Text(roomClass.shift)
                                 .foregroundStyle(Color.gray)
