@@ -43,6 +43,7 @@ struct SideBarView: View {
                     }
                 }
             }
+
             .listStyle(.sidebar)
 
         }
@@ -51,5 +52,5 @@ struct SideBarView: View {
 
 
 #Preview {
-    SideBar(sele)
+    SideBarView(selectedMenu: .constant(.mural), selectedClass: .constant(.none))
 }

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct DetailView: View {
+
+    @Binding var selectedClass: UUID?
+    @Binding var selectedMenu: MainMenu?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if let selectedClass = selectedClass {
+                Text("Detail view for \(selectedClass)")
+            } else {
+                Text("Select a class")
+            }
+        }
     }
 }
 
+
 #Preview {
-    DetailView()
+    DetailView(selectedClass: .constant(UUID()), selectedMenu: .constant(.atividades))
 }
