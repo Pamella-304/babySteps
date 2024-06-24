@@ -73,7 +73,7 @@ struct LocalizedSignInWithAppleButton: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {
-        print("Logado com sucesso")
+        //implementar a navegação aqui
     }
     
     
