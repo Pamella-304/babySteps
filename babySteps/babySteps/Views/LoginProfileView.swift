@@ -8,15 +8,17 @@
 import SwiftUI
 import Combine
 import AuthenticationServices
-
+import CloudKit
 
 struct LoginProfileView: View {
+   let testManager = TestManager()
     
     @State private var viewModel =  LoginProfileViewModel()
 
     
     var body: some View {
         Text("Tela de Login")
+<<<<<<< HEAD
         
        
     }
@@ -37,6 +39,14 @@ struct LoginProfileView: View {
         func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {
             // No need to update the view
         }
+=======
+            .onAppear{
+                print("entrou no on appear")
+                testManager.testSaveStudent()
+                print("passou por aqui")
+            }
+
+>>>>>>> develop
     }
     
 }
