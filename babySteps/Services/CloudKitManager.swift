@@ -11,9 +11,12 @@ import Foundation
 class CloudKitManager {
     
     static let shared = CloudKitManager()
-        private let publicDatabase = CKContainer.default().publicCloudDatabase
-        
-        private init() {}
+    private let publicDatabase: CKDatabase
+
+    private init() {
+           let container = CKContainer(identifier: "iCloud.babyStepsTeam.AppleAcademy")
+           self.publicDatabase = container.publicCloudDatabase
+       }
     
     func saveStudent(student: Student) {
         let record = CKRecord(recordType: "Student")
@@ -42,7 +45,7 @@ class CloudKitManager {
         record["parentID"] = student.parentID as CKRecordValue
         record["schoolID"] = student.schoolID as CKRecordValue
 
-        let publicDatabase = CKContainer.default().publicCloudDatabase
+//        let publicDatabase = CKContainer.default().publicCloudDatabase
         publicDatabase.save(record) { record, error in
             if let error = error {
                 print("Error saving student: \(error.localizedDescription)")
@@ -71,7 +74,7 @@ class CloudKitManager {
         record["attendanceObservation"] = diary.attendanceObservation as CKRecordValue
         record["completed"] = diary.completed as CKRecordValue
 
-        let publicDatabase = CKContainer.default().publicCloudDatabase
+//        let publicDatabase = CKContainer.default().publicCloudDatabase
         publicDatabase.save(record) { record, error in
             if let error = error {
                 print("Error saving diary: \(error.localizedDescription)")
@@ -88,6 +91,9 @@ class CloudKitManager {
 //Fazendo um teste:
 // Salvar um novo estudante no banco de dados
 class TestManager {
+    let cloudKitManager = CloudKitManager.shared
+
+    
     func testSaveStudent() {
         let joao = Student(
             id: UUID().uuidString, // Gera um novo UUID para o id
@@ -111,7 +117,7 @@ class TestManager {
             selected: false,
             email: "joao@example.com",
             password: "senha123",
-            announcements: [],
+            announcements: ["Advertencia", "Suspensão"],
             parentID: "parent123",
             schoolID: "school123"
         )
