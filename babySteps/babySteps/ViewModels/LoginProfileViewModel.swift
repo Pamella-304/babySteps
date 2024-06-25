@@ -15,6 +15,7 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     var senha = ""
     var showAlert = false
     var alertMessage = ""
+    var isLoggedIn = false
 
 
     func  configure(_ request: ASAuthorizationAppleIDRequest) {
@@ -73,7 +74,7 @@ struct LocalizedSignInWithAppleButton: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {
-        //implementar a navegação aqui
+
     }
     
     
