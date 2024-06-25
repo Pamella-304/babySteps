@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-struct Class {
+struct Classroom {
     var id: UUID = UUID()
     var className: String
     var teachers: [UUID]
-    var students: [UUID]
+    var students: [Student]
     var shift: String
     var activityDiary: [Date: Diary]
 } 
 
 
-
 class ClassList: ObservableObject {
-    @Published var classList: [Class]
+    @Published var classList: [Classroom]
     
-    init(classList: [Class]) {
+    init(classList: [Classroom]) {
         self.classList = [
-            Class(
+            Classroom(
                 className: "Math 101",
                 teachers: [UUID()],
-                students: [UUID()],
+                students: [MockData().classes[0].students[0]],
                 shift: "Morning",
                 activityDiary: [:]
             )
