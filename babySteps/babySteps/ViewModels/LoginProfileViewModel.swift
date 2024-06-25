@@ -11,11 +11,13 @@ import Combine
 
 @Observable
 class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
+    
+    
+    var isLoggedIn = false
     var email = ""
     var senha = ""
     var showAlert = false
     var alertMessage = ""
-    var isLoggedIn = false
 
 
     func  configure(_ request: ASAuthorizationAppleIDRequest) {
@@ -33,6 +35,11 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
                     
                     UserDefaults.standard.setValue(appleUserData, forKey: "appleUser_\(appleUser.userID)")
                     UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+                    DispatchQueue.main.async {
+                        self.isLoggedIn = true
+                        print(self.isLoggedIn)
+                    }
+                    
                 } else {
                     // Handle case where appleUser couldn't be created
                     showAlert = true
@@ -51,10 +58,20 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     func startSignInWithAppleFlow() {
             let request = ASAuthorizationAppleIDProvider().createRequest()
             configure(request)
-            
+
             let controller = ASAuthorizationController(authorizationRequests: [request])
             controller.delegate = self
             controller.performRequests()
+        
+
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        handle(.success(authorization))
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        handle(.failure(error))
     }
     
 }
