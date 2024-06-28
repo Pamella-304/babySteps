@@ -300,9 +300,7 @@
 				95D7A3632C245DB300C1F4A7 /* SideBarView.swift in Sources */,
 				616689AD2C22FEBC00464D33 /* new.swift in Sources */,
 				95D7A3682C2471F900C1F4A7 /* MockData.swift in Sources */,
-
 				6149A9EF2C24694B00AFF5B1 /* CloudKitManager.swift in Sources */,
-
 				616689BB2C231C1500464D33 /* ActivityDiary.swift in Sources */,
 				616689AD2C22FEBC00464D33 /* new.swift in Sources */,
 				616689B32C23190000464D33 /* Diary.swift in Sources */,
@@ -441,7 +439,7 @@
 				CODE_SIGN_ENTITLEMENTS = babySteps/babySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U82ZBCXKJ2;
+				DEVELOPMENT_TEAM = 56QA9FYA3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,7 +468,7 @@
 				CODE_SIGN_ENTITLEMENTS = babySteps/babySteps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U82ZBCXKJ2;
+				DEVELOPMENT_TEAM = 56QA9FYA3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
