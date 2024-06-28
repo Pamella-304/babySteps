@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct babyStepsApp: App {
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some Scene {
         WindowGroup {
-            LoginProfileView()
+            Main()
+//            LoginProfileView()
         }
     }
 }
