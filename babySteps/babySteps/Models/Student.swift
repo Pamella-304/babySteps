@@ -5,8 +5,10 @@
 //  Created by Pamella Alvarenga on 19/06/24.
 //
 
+import Foundation
+
 struct Student: Identifiable, Hashable {
-    var id: String = ""
+    var id: String = UUID().uuidString
     var name: String
     var gender: String
     var address: String
@@ -30,5 +32,4 @@ struct Student: Identifiable, Hashable {
     var announcements: [String] = []
     var parentID: String
     var schoolID: String
-
 }

@@ -10,33 +10,41 @@ import SwiftUI
 
 
 struct ContentSplitView: View {
-    @State private var searchText = ""
-    @Binding var selectedClass: String?
+
+    @State var viewModel: ContentSplitViewModel
+
     var body: some View {
         VStack {
-            ForEach(MockData().classes[0].students, id:\.id) { student in
+            List(viewModel.filteredStudents, id:\.id, selection: $viewModel.selectedStudent) { student in
                 HStack {
                     AsyncImage(url: URL(string: "")) { image in
                         image.resizable()
+                            .clipShape(Circle())
+                            .frame(width: 44, height: 44)
                     } placeholder: {
                         Image("childPlaceHolder")
                             .resizable()
                             .clipShape(Circle())
-                            .frame(width: 50, height: 50)
+                            .frame(width: 44, height: 44)
                     }
                     Text(student.name)
                     Spacer()
-                }
+                    if viewModel.selectedStudent == student.id {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(.accent)
+                    }
+                }.listRowSeparator(.hidden)
             }
-            Spacer()
-                .searchable(text: $searchText, placement: .navigationBarDrawer)
+            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer)
+            .keyboardType(.webSearch)
         }
-
         .padding()
-        .navigationTitle("\(String(describing: selectedClass))")
     }
+
+
+
 }
 
-#Preview {
-    ContentSplitView(selectedClass: .constant("Akanskddoskds"))
-}
+//#Preview {
+//    ContentSplitView(viewModel: ContentSplitViewModel(selectedClass: .constant(MainMenu.turma(className: "Turma A")), selectedMenu: .constant(MainMenu.perfil)))
+//}

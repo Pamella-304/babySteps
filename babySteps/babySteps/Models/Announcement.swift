@@ -15,8 +15,8 @@ struct Announcement: Identifiable, Hashable {
     var type: String  // Store the raw value of the enum as a String
     
     enum Types: String {
-        case meetings = "meetings"
-        case events = "events"
+        case meetings = "reuniões"
+        case events = "eventos"
     }
     
     init(id: String, title: String, description: String, photo: String, dateEvent: String, writerName: String, type: Types) {
