@@ -25,6 +25,7 @@
 		616689BD2C231C5900464D33 /* FoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BC2C231C5900464D33 /* FoodMenu.swift */; };
 		616689BF2C231C6E00464D33 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BE2C231C6E00464D33 /* Activity.swift */; };
 		616689C12C231C8900464D33 /* SchoolUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689C02C231C8900464D33 /* SchoolUser.swift */; };
+		6192F1B42C2B06E800177EA0 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192F1B32C2B06E800177EA0 /* Navigation.swift */; };
 		61A97B922C29AD7300E2A55C /* AppleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A97B912C29AD7300E2A55C /* AppleUser.swift */; };
 		95D7A35E2C23001900C1F4A7 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7A35D2C23001900C1F4A7 /* Main.swift */; };
 		95D7A3632C245DB300C1F4A7 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7A3622C245DB300C1F4A7 /* SideBarView.swift */; };
@@ -54,6 +55,7 @@
 		616689BC2C231C5900464D33 /* FoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenu.swift; sourceTree = "<group>"; };
 		616689BE2C231C6E00464D33 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		616689C02C231C8900464D33 /* SchoolUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUser.swift; sourceTree = "<group>"; };
+		6192F1B32C2B06E800177EA0 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		61A97B912C29AD7300E2A55C /* AppleUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleUser.swift; sourceTree = "<group>"; };
 		95D7A35D2C23001900C1F4A7 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		95D7A3622C245DB300C1F4A7 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		6166898D2C21C97A00464D33 /* babySteps */ = {
 			isa = PBXGroup;
 			children = (
+				6192F1B22C2B06DA00177EA0 /* Utilities */,
 				95D7A35B2C22FFF700C1F4A7 /* Screens */,
 				6149A9EC2C24682500AFF5B1 /* babySteps.entitlements */,
 				6166898E2C21C97A00464D33 /* babyStepsApp.swift */,
@@ -175,6 +178,14 @@
 				616689A82C21CEBB00464D33 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6192F1B22C2B06DA00177EA0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6192F1B32C2B06E800177EA0 /* Navigation.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		61A97B932C29ADBE00E2A55C /* Login */ = {
@@ -311,6 +322,7 @@
 				95D7A36A2C2473D900C1F4A7 /* ContentSplitView.swift in Sources */,
 				95D7A3632C245DB300C1F4A7 /* SideBarView.swift in Sources */,
 				616689AD2C22FEBC00464D33 /* new.swift in Sources */,
+				6192F1B42C2B06E800177EA0 /* Navigation.swift in Sources */,
 				95D7A3682C2471F900C1F4A7 /* MockData.swift in Sources */,
 				6149A9EF2C24694B00AFF5B1 /* CloudKitManager.swift in Sources */,
 				616689BB2C231C1500464D33 /* ActivityDiary.swift in Sources */,

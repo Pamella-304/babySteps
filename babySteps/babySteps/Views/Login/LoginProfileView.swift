@@ -7,11 +7,10 @@
 
 import SwiftUI
 import AuthenticationServices
-//import CloudKit
 import Combine
 
 struct LoginProfileView: View {
-    
+    @State private var stackPath = Router()
     @State private var viewModel = LoginProfileViewModel()
     
     var body: some View {
