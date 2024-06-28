@@ -14,7 +14,7 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     
     
     var isLoggedIn = false
-    var email = ""
+    var email = "le"
     var senha = ""
     var showAlert = false
     var alertMessage = ""
