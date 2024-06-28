@@ -25,7 +25,7 @@ class ClassList: ObservableObject {
             Classroom(
                 className: "Math 101",
                 teachers: [UUID()],
-                students: [MockData().classes[0].students[0]],
+                students: [MockData().classrooms[0].students[0]],
                 shift: "Morning",
                 activityDiary: [:]
             )
