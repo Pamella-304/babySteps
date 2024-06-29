@@ -6,10 +6,11 @@
 xcuserdata/
 babySteps/.DS_Store
 .DS_Store
+babySteps/.DS_Store
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
-
+*.DS_Store
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/

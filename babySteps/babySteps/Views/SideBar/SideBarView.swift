@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SideBarView: View {
 
-    @Binding var selectedMenu: MainMenu?
-    @Binding var selectedClass: String?
+    @State var viewModel = SideBarViewModel()
 
     var body: some View {
-        VStack{
-            List(selection: $selectedMenu) {
+        VStack {
+
+            List(selection: $viewModel.mainMenu.selectedMenu) {
                 NavigationLink(value: MainMenu.mural) {
                     Label("Mural", systemImage: "rectangle.on.rectangle")
                 }
@@ -29,9 +29,10 @@ struct SideBarView: View {
                 }
 
                 Section("Your Classes") {
-                    ForEach(MockData().classes, id: \.id) { roomClass in
+                    ForEach(MockData().classrooms, id: \.id) { roomClass in
                         Button {
-                            selectedClass = roomClass.className
+                            MainMenuSingleton.shared.selectedClass = roomClass.className
+                            MainMenuSingleton.shared.selectedMenu = .turma(className: MainMenuSingleton.shared.selectedClass!)
                         } label: {
                             HStack {
                                 Label(roomClass.className, systemImage: "rectangle.inset.filled.and.person.filled")
@@ -43,14 +44,14 @@ struct SideBarView: View {
                     }
                 }
             }
-
+            .listRowSeparator(.hidden)
             .listStyle(.sidebar)
-
+            Spacer()
         }
     }
 }
 
 
 #Preview {
-    SideBarView(selectedMenu: .constant(.mural), selectedClass: .constant(.none))
+    SideBarView()
 }

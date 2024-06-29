@@ -8,44 +8,45 @@
 import SwiftUI
 
 struct Main: View {
-    @Environment(\.colorScheme) var colorScheme
-    @State private var visibility: NavigationSplitViewVisibility = .all
-    @State private var selectedMenu: MainMenu? = nil
-    @State private var selectedClass: String? = nil
-
+    @State var viewModel = MainViewModel()
 
     var body: some View {
 
          // Only show the Content when in a class View or in the chat view
-        if selectedMenu == .chat || selectedClass != nil {
+        if MainMenuSingleton.shared.selectedMenu == .chat || MainMenuSingleton.shared.selectedMenu == .turma(className: MainMenuSingleton.shared.selectedClass ?? "") {
+            NavigationSplitView(columnVisibility: $viewModel.visibility) {
 
-            NavigationSplitView(columnVisibility: $visibility) {
-                SideBarView(selectedMenu: $selectedMenu, selectedClass: $selectedClass)
+                SideBarView(viewModel: SideBarViewModel())
                     .navigationTitle("Creche Mirasol")
-
+                    .toolbar {
+                        Button("", systemImage: "plus") {
+                            print("plus")
+                        }
+                    }
             } content: {
-
-                ContentSplitView(selectedClass: $selectedClass)
+                ContentSplitView(viewModel: ContentSplitViewModel())
+                    .navigationTitle("\(String(describing: MainMenuSingleton.shared.selectedMenu!.title.capitalized))")
 
             } detail: {
 
-                DetailView(selectedClass: $selectedClass, selectedMenu: $selectedMenu)
-                
+                DetailView()
+
             }
-            .onChange(of: selectedMenu) { if selectedMenu != nil { selectedClass = nil } }
-            .onChange(of: selectedClass) { if selectedClass != nil { selectedMenu = nil } }
         } else {
 
             //Show only the sideBar and the Detail when is in the Mural, Atividades or Profile
+
             NavigationSplitView {
-                SideBarView(selectedMenu: $selectedMenu, selectedClass: $selectedClass)
-                    .navigationTitle("Creche Mirasol")
+                    SideBarView()
+                        .navigationTitle("Creche Mirasol")
+                        .toolbar {
+                            Button("", systemImage: "plus") {
+                                print("plus")
+
+                            }
+                        }
             } detail: {
-                if let selectedClass = selectedClass {
-                    Text("Detail view for \(selectedClass)")
-                } else {
-                    Text("Select a class")
-                }
+                DetailView()
             }
 
         }
@@ -56,26 +57,14 @@ struct Main: View {
     Main()
 }
 
-//struct Child: Identifiable {
-//    let id = UUID()
-//    var name: String
-//    var image: String = "childPlaceHolder"
-//}
-//
-//struct RoomClass: Identifiable, Hashable {
-//    let id = UUID()
-//    var name: String
-//    var shift: String
-//}
 
 enum MainMenu: Hashable  {
     case mural, atividades, chat, perfil
-    //    case turma(UUID)
+    indirect case turma(className: String)
 
 
     var title: String {
         switch self {
-
             case .mural:
                 "Mural"
             case .atividades:
@@ -84,8 +73,8 @@ enum MainMenu: Hashable  {
                 "Chat"
             case .perfil:
                 "Perfil"
-                //            case .turma:
-                //                "Turma"
+            case .turma(let className):
+                "\(className)"
         }
     }
 
@@ -99,10 +88,8 @@ enum MainMenu: Hashable  {
                 "bubble.left"
             case .perfil:
                 "person.circle"
-                //            case .turma:
-                //                "run"
+            case .turma:
+                "rectangle.inset.filled.and.person.filled"
         }
     }
 }
-
-

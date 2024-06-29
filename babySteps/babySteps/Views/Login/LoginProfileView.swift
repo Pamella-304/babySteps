@@ -17,8 +17,8 @@ struct LoginProfileView: View {
 
         VStack{
             if viewModel.isLoggedIn {
-                Text("está logado")
-            } else {
+                Main()
+                } else {
                 Text("Tela de Login")
                 
                 LocalizedSignInWithAppleButton(
