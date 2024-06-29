@@ -239,7 +239,7 @@
 				95AA31C32C2C62E700BD82AF /* AnouncementCardView.swift */,
 			);
 			path = MuralView;
-
+		};
 		6192F1B22C2B06DA00177EA0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
