@@ -28,7 +28,7 @@ struct SideBarView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
 
-                Section("Your Classes") {
+                Section("Suas Turmas") {
                     ForEach(MockData().classrooms, id: \.id) { roomClass in
                         Button {
                             MainMenuSingleton.shared.selectedClass = roomClass.className
@@ -42,6 +42,11 @@ struct SideBarView: View {
                             }
                         }
                     }
+                    
+                    Button("Criar nova turma", systemImage: "plus") {
+                       print("adicionar nova turma")
+                        //implementar logica iCloud aqui
+                    }.foregroundColor(Color.accentColor)
                 }
             }
             .listRowSeparator(.hidden)
