@@ -9,9 +9,8 @@ import AuthenticationServices
 
 struct AppleUser: Codable {
     let userID: String
-    let firstName: String?
-    let lastName: String?
     let userName: String?
+    let fullName: String?
     let email: String?
 
     init?(credentials: ASAuthorizationAppleIDCredential) {
@@ -19,9 +18,7 @@ struct AppleUser: Codable {
         guard let userID = credentials.user as String? else { return nil }
             self.userID = userID
             self.userName = credentials.fullName?.givenName
-            self.firstName = credentials.fullName?.givenName
-            self.lastName = credentials.fullName?.familyName
-
+            self.fullName = credentials.fullName?.givenName
             self.email = credentials.email
         
     }
