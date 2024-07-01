@@ -30,6 +30,9 @@ struct MuralView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         print("PlusToolBarClicked")
+                        //Implementar aqui a logica de abrir o popUp
+                        //implementar a logica de armazenaento mo iCloud
+                        
                     } label: {
                         Image(systemName: "plus")
                             .foregroundStyle(.accent)
