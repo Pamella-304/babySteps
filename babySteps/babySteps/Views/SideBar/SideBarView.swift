@@ -18,7 +18,7 @@ struct SideBarView: View {
                 NavigationLink(value: MainMenu.mural) {
                     Label("Mural", systemImage: "rectangle.on.rectangle")
                 }
-                NavigationLink(value: MainMenu.atividades) {
+                NavigationLink(value: MainMenu.activities) {
                     Label("Atividades", systemImage: "calendar")
                 }
                 NavigationLink(value: MainMenu.chat) {

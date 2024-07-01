@@ -8,17 +8,17 @@
 import SwiftUI
 
 
-struct CardapioView: View {
+struct MealMenuView: View {
     var body: some View {
         ScrollView {
         VStack(spacing: 30) {
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
-                DayFoodMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
+                DayMealMenu(date: Date())
             }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
         }.background(Color.detailViewBackground)
@@ -41,21 +41,21 @@ struct CardapioView: View {
 
 
 
-struct DayFoodMenu: View {
+struct DayMealMenu: View {
     let date: Date
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
 
             Text("\(weekDayFormat(date: date))")
-                .font(.title2)
+                .font(.system(.title2, design: .rounded))
                 .fontWeight(.semibold)
             Text("\(getFormattedDate(date: date))")
-                .font(.title3)
+                .font(.system(.title3, design: .rounded))
                 .foregroundStyle(.gray)
 
             HStack(spacing: 30) {
-                FoodMenuCard(foodTime: "Almoço")
-                FoodMenuCard(foodTime: "Lanche da Tarde")
+                MealMenuCard(foodTime: "Almoço")
+                MealMenuCard(foodTime: "Lanche da Tarde")
             }
         }
     }
@@ -74,13 +74,12 @@ struct DayFoodMenu: View {
     }
 }
 
-struct FoodMenuCard: View {
+struct MealMenuCard: View {
     let foodTime: String
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Text(foodTime)
-                .font(.title2)
-                .fontWeight(.semibold)
+                .font(.system(.title2, design: .rounded, weight: .semibold))
             HStack(spacing: 50) {
                 VStack(alignment: .leading, spacing: 12) {
                     TypeAndFoodLabelView(type: "Porção", food: "Arroz e feijão")
@@ -106,14 +105,14 @@ struct TypeAndFoodLabelView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(type.uppercased())
-                .font(.body)
+                .font(.system(.body, design: .rounded))
                 .foregroundStyle(Color.gray)
             Text(food)
-                .font(.body)
+                .font(.system(.body, design: .rounded))
         }
     }
 }
 
 #Preview {
-    CardapioView()
+    MealMenuView()
 }

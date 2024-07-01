@@ -15,12 +15,12 @@ struct DetailView: View {
             switch MainMenuSingleton.shared.selectedMenu {
                 case .mural:
                     MuralView()
-                case .atividades:
+                case .activities:
                     EmptyView()
                 case .chat:
                     EmptyView()
                 case .perfil:
-                    EmptyView()
+                    ProfileView()
                 case .turma(let className):
                     StudentDiaryView()
                 case .none:

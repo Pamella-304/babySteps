@@ -59,7 +59,7 @@ struct Main: View {
 
 
 enum MainMenu: Hashable  {
-    case mural, atividades, chat, perfil
+    case mural, activities, chat, perfil
     indirect case turma(className: String)
 
 
@@ -67,7 +67,7 @@ enum MainMenu: Hashable  {
         switch self {
             case .mural:
                 "Mural"
-            case .atividades:
+            case .activities:
                 "Atividades"
             case .chat:
                 "Chat"
@@ -82,7 +82,7 @@ enum MainMenu: Hashable  {
         switch self {
             case .mural:
                 "rectangle.fill.on.rectangle.fill"
-            case .atividades:
+            case .activities:
                 "calendar.circle"
             case .chat:
                 "bubble.left"

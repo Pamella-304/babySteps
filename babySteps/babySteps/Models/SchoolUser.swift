@@ -7,6 +7,8 @@
 
 struct SchoolUser: Identifiable {
     var id: String = ""
+    var firstName: String
+    var lastName: String
     var authID: String = ""
     var roomClasses: [String]
     var announcements: [String]

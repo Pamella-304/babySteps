@@ -8,12 +8,7 @@
 import Foundation
 
 struct MockData {
-    var sideBar = [
-        MainMenu.mural,
-        MainMenu.atividades,
-        MainMenu.chat,
-        MainMenu.perfil
-    ]
+    let schoolUser = SchoolUser(firstName: "Marlene", lastName: "Silva",roomClasses: ["Turma A", "Turma B"], announcements: [], chatMessages: [], activities: [], email: "professora.marlene@apple.com", students: [])
 
     let classrooms = [
         Classroom(

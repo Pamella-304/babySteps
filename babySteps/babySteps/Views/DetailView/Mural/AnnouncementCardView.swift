@@ -73,13 +73,16 @@ struct EventCardView: View {
 
                 VStack(alignment: .leading) {
                     Text(announcement.title)
-                        .font(.title2)
+                        .font(.system(.title2, design: .rounded))
                         .bold()
 
                     VStack(alignment: .leading) {
                         Text(announcement.description)
+                            .font(.system(.body, design: .rounded))
                         + Text("Read more...")
+                            .font(.system(.body, design: .rounded))
                             .foregroundStyle(Color.accentColor)
+
 //                            .onTapGesture {
 //                                isNavigating = true
 //                            }
@@ -109,18 +112,19 @@ struct MeetingCardView: View {
                         .clipShape(Circle())
                         .frame(width: 77, height: 77)
                 }
-                VStack {
+                VStack(alignment: .leading) {
                     Text(announcement.writerName)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.system(.body, design: .rounded, weight: .medium))
 
                     Text(announcement.dateEvent)
+                        .font(.system(.body, design: .rounded))
                         .foregroundStyle(Color.gray)
                 }.padding(.leading, 10)
                 Spacer()
             }
             VStack(alignment: .leading) {
                 Text(announcement.description)
+                    .font(.system(.body, design: .rounded))
                 Spacer()
                 NavigationLink("Read More..", destination: EmptyView())
             }
