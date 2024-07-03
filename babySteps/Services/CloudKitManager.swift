@@ -12,11 +12,11 @@ class CloudKitManager {
     
     static let shared = CloudKitManager()
     private let publicDatabase: CKDatabase
-
+    
     private init() {
-           let container = CKContainer(identifier: "iCloud.babyStepsTeam.AppleAcademy")
-           self.publicDatabase = container.publicCloudDatabase
-       }
+        let container = CKContainer(identifier: "iCloud.babyStepsTeam.AppleAcademy")
+        self.publicDatabase = container.publicCloudDatabase
+    }
     
     func saveStudent(student: Student) {
         let record = CKRecord(recordType: "Student")
@@ -44,8 +44,8 @@ class CloudKitManager {
         record["announcements"] = student.announcements as CKRecordValue
         record["parentID"] = student.parentID as CKRecordValue
         record["schoolID"] = student.schoolID as CKRecordValue
-
-//        let publicDatabase = CKContainer.default().publicCloudDatabase
+        
+        //        let publicDatabase = CKContainer.default().publicCloudDatabase
         publicDatabase.save(record) { record, error in
             if let error = error {
                 print("Error saving student: \(error.localizedDescription)")
@@ -73,8 +73,8 @@ class CloudKitManager {
         record["attendance"] = diary.attendance as CKRecordValue
         record["attendanceObservation"] = diary.attendanceObservation as CKRecordValue
         record["completed"] = diary.completed as CKRecordValue
-
-//        let publicDatabase = CKContainer.default().publicCloudDatabase
+        
+        //        let publicDatabase = CKContainer.default().publicCloudDatabase
         publicDatabase.save(record) { record, error in
             if let error = error {
                 print("Error saving diary: \(error.localizedDescription)")
@@ -84,9 +84,32 @@ class CloudKitManager {
         }
     }
     
+    func saveTeacher(teacher: Teacher) {
+        let record = CKRecord(recordType: "Teacher")
+        record["firstName"] = teacher.firstName as CKRecordValue
+        record["lastName"] = teacher.lastName as CKRecordValue
+        record["authID"] = teacher.authID as CKRecordValue
+        record["email"] = teacher.email as CKRecordValue
+        record["userName"] = teacher.userName as CKRecordValue
+        
+        // Você pode serializar os arrays em strings ou CKReferences, conforme necessário
+        record["roomClasses"] = teacher.roomClasses.map { $0.id } as CKRecordValue
+        record["announcements"] = teacher.announcements.map { $0.id } as CKRecordValue
+        record["chatMessages"] = teacher.chatMessages as CKRecordValue
+        record["activities"] = teacher.activities.map { $0.id } as CKRecordValue
+        record["students"] = teacher.students.map { $0.id } as CKRecordValue
+        
+        publicDatabase.save(record) { record, error in
+            if let error = error {
+                print("Error saving teacher: \(error.localizedDescription)")
+            } else {
+                print("Teacher saved successfully!")
+            }
+            
+        }
+        
+    }
 }
-
-
 
 //Fazendo um teste:
 // Salvar um novo estudante no banco de dados

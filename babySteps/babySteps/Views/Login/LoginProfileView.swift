@@ -9,6 +9,7 @@ import SwiftUI
 import AuthenticationServices
 import Combine
 
+
 struct LoginProfileView: View {
     @State private var stackPath = Router()
     @State private var viewModel = LoginProfileViewModel()
@@ -17,7 +18,8 @@ struct LoginProfileView: View {
 
         VStack{
             if viewModel.isLoggedIn {
-                Main()
+                LoggedProfileView()
+                //                LoggedProfileView(teacher: viewModel.teacher)
                 } else {
                 Text("Tela de Login")
                 

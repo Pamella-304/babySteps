@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-struct ProfileView: View {
-    var schoolUser = MockData().schoolUser
-    var name: String?
-    init(schoolUser: SchoolUser = MockData().schoolUser, name: String? = nil) {
-        self.schoolUser = schoolUser
-        self.name = schoolUser.firstName + " " + schoolUser.lastName
-    }
+
+struct LoggedProfileView: View {
+    
+    let viewModel = LoginProfileViewModel()
+    
     var body: some View {
         VStack {
             VStack(spacing: 15) {
@@ -29,14 +27,14 @@ struct ProfileView: View {
                         .clipShape(Circle())
                         .frame(width: 112, height: 112)
                 }
+                
+//                Text("\(viewModel.teacher!.firstName) \(viewModel.teacher!.lastName)")
+//                    .font(.system(.title, design: .rounded))
+//                    .bold()
 
-                Text(name!)
-                    .font(.system(.title, design: .rounded))
-                    .bold()
-
-                Text("\(schoolUser.email) ")
-                    .font(.system(.title2, design: .rounded))
-                    .fontWeight(.regular)
+//                Text(viewModel.teacher?.email )
+//                    .font(.system(.title2, design: .rounded))
+//                    .fontWeight(.regular)
             }
 
             VStack(alignment: .leading) {
@@ -46,6 +44,8 @@ struct ProfileView: View {
                     Text("Minhas Turmas")
                         .font(.system(.title, design: .rounded))
                         .bold()
+                    
+                    //listar aqui as turmas do professor
                 }
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -64,16 +64,15 @@ struct ProfileView: View {
 
                 VStack(alignment: .leading) {
                     Section {
-                        List {
-                            Text("Enviar email para a coordenadora Gabriela")
-                                .font(.system(.body, design: .rounded, weight: .regular))
-                            Text("Cobrar auxiliar Matheus do plano de aula 05/07")
-                                .font(.system(.body, design: .rounded, weight: .regular))
-
-
-
-                        }.frame(width: .infinity)
-                        .listRowSpacing(10)
+                        
+                        Text("lista aqui")
+//                        List {
+//                            ForEach(viewModel.teacher!.announcements, id: \.self) { announcement in
+//                                Text(announcement.title)
+//                                .font(.system(.body, design: .rounded, weight: .regular))
+//                                                        }
+//                        }.frame(width: .infinity)
+//                        .listRowSpacing(10)
 
                     } header: {
                         HStack(alignment: .bottom) {
@@ -89,6 +88,7 @@ struct ProfileView: View {
                                     .foregroundStyle(Color.orangePrimary)
                             }
                         }
+                        
                     } footer: {
                         Button {
                             print("AddPressed")
@@ -105,6 +105,7 @@ struct ProfileView: View {
             }
             Button(action: {
                 print("EndSession")
+                //inserir lógica de deslogar
             }, label: {
                 Text("Finalizar Sessão")
                     .padding(8)
@@ -113,6 +114,7 @@ struct ProfileView: View {
                     .frame(width: 500)
                     .background(Color.white)
                     .clipShape(.rect(cornerRadius: 12))
+            
             })
 
         }
@@ -120,14 +122,6 @@ struct ProfileView: View {
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
             .background(Color.detailViewBackground)
 
-    }
-}
-
-#Preview {
-    NavigationSplitView {
-SideBarView()
-    } detail: {
-        ProfileView()
     }
 }
 

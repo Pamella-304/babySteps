@@ -20,7 +20,7 @@ struct DetailView: View {
                 case .chat:
                     EmptyView()
                 case .perfil:
-                    ProfileView()
+                    LoggedProfileView()
                 case .turma(let className):
                     StudentDiaryView()
                 case .none:

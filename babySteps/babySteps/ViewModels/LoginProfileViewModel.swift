@@ -12,11 +12,9 @@ import Combine
 @Observable
 class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     
-    
     var isLoggedIn = false
-    var email = "le"
-    var senha = ""
     var showAlert = false
+    var teacher: Teacher?
     var alertMessage = ""
 
 
@@ -29,23 +27,38 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
         case .success(let auth):
             switch auth.credential {
             case let appleIDCredentials as ASAuthorizationAppleIDCredential:
-                
-                if let appleUser = AppleUser(credentials: appleIDCredentials),
-                   let appleUserData =  try? JSONEncoder().encode(appleUser) {
+                print(appleIDCredentials)
+                let userId = appleIDCredentials.user
+                let email = appleIDCredentials.email ?? "E-mail não disponível"
+                let firstName = appleIDCredentials.fullName?.givenName ?? "Nome não disponível"
+                let lastName = appleIDCredentials.fullName?.familyName ?? "Sobrenome Não disponível"
                     
-                    UserDefaults.standard.setValue(appleUserData, forKey: "appleUser_\(appleUser.userID)")
-                    UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+                    let teacher = Teacher(
+                        id: UUID().uuidString,
+                        firstName: firstName,
+                        lastName: lastName,
+                        authID: userId,
+                        roomClasses: [],
+                        announcements: [],
+                        chatMessages: [],
+                        activities: [],
+                        email: email,
+                        userName: "\(firstName) \(lastName)",
+                        students: []
+                    )
+                    
+                    //print(teacher)
+                    // Salvar no iCloud
+                    CloudKitManager.shared.saveTeacher(teacher: teacher)
+                    
                     DispatchQueue.main.async {
+                        self.teacher = teacher
+                        print("self.teacher:")
+                        print(self.teacher)
                         self.isLoggedIn = true
                         print(self.isLoggedIn)
                     }
-                    
-                } else {
-                    // Handle case where appleUser couldn't be created
-                    showAlert = true
-                    alertMessage = "Não foi possível criar o usuário Apple"
-                }
-                
+               
             default:
                 break
             }

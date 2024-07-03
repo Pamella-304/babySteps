@@ -8,7 +8,7 @@
 import Foundation
 
 struct MockData {
-    let schoolUser = SchoolUser(firstName: "Marlene", lastName: "Silva",roomClasses: ["Turma A", "Turma B"], announcements: [], chatMessages: [], activities: [], email: "professora.marlene@apple.com", students: [])
+//    let teacher = Teacher(firstName: "Marlene", lastName: "Silva",roomClasses: ["Turma A", "Turma B"], announcements: [], chatMessages: [], activities: [], email: "professora.marlene@apple.com", students: [])
 
     let classrooms = [
         Classroom(
