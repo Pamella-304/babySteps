@@ -47,16 +47,4 @@ struct MuralView: View {
 }
 
 
-struct MuralSegmentedControlView: View {
-    @Binding var segementedFilter: Announcement.Types
-    var segmentedOptions = [Announcement.Types.meetings, Announcement.Types.events]
-    var body: some View {
-        Picker("", selection: $segementedFilter) {
-            ForEach(segmentedOptions.indices, id:\.self) { option in
-                Text(segmentedOptions[option].rawValue.capitalized).tag(segmentedOptions[option])
-            }
-        }.pickerStyle(.segmented)
-            .clipShape(.rect(cornerRadius: 10))
-            .frame(width: 600)
-    }
-}
+
