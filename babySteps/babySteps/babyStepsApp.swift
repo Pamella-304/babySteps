@@ -13,8 +13,8 @@ struct babyStepsApp: App {
 
     var body: some Scene {
         WindowGroup {
-           // Main()
-            LoginProfileView()
+            Main()
+           // LoginProfileView()
         }
     }
 }
