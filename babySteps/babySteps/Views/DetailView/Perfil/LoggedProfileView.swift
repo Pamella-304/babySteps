@@ -28,13 +28,13 @@ struct LoggedProfileView: View {
                         .frame(width: 112, height: 112)
                 }
                 
-//                Text("\(viewModel.teacher!.firstName) \(viewModel.teacher!.lastName)")
-//                    .font(.system(.title, design: .rounded))
-//                    .bold()
+                Text("\(viewModel.teacher?.firstName ?? "") \(viewModel.teacher?.lastName ?? "")")
+                    .font(.system(.title, design: .rounded))
+                    .bold()
 
-//                Text(viewModel.teacher?.email )
-//                    .font(.system(.title2, design: .rounded))
-//                    .fontWeight(.regular)
+                Text(viewModel.teacher?.email ?? "")
+                    .font(.system(.title2, design: .rounded))
+                    .fontWeight(.regular)
             }
 
             VStack(alignment: .leading) {

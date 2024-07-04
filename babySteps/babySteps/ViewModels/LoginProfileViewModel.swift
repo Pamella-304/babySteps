@@ -16,6 +16,20 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     var showAlert = false
     var teacher: Teacher?
     var alertMessage = ""
+    
+    override init() {
+        self.isLoggedIn = false
+        self.showAlert = false
+        self.teacher = Teacher()
+        self.alertMessage = ""
+    }
+    
+    init(isLoggedIn: Bool = false, showAlert: Bool = false, teacher: Teacher? = nil, alertMessage: String = "") {
+        self.isLoggedIn = isLoggedIn
+        self.showAlert = showAlert
+        self.teacher = teacher
+        self.alertMessage = alertMessage
+    }
 
 
     func  configure(_ request: ASAuthorizationAppleIDRequest) {
@@ -27,6 +41,9 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
         case .success(let auth):
             switch auth.credential {
             case let appleIDCredentials as ASAuthorizationAppleIDCredential:
+                // @TODO: Por algum motivo este appleIDCredentials está vindo vazio,
+                // Necessidade de inspecionar o motivo disto estar vindo sem email e name, etc.
+                //
                 print(appleIDCredentials)
                 let userId = appleIDCredentials.user
                 let email = appleIDCredentials.email ?? "E-mail não disponível"
