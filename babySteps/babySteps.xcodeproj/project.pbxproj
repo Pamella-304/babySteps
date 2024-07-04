@@ -24,11 +24,12 @@
 		616689BB2C231C1500464D33 /* ActivityDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BA2C231C1500464D33 /* ActivityDiary.swift */; };
 		616689BD2C231C5900464D33 /* FoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BC2C231C5900464D33 /* FoodMenu.swift */; };
 		616689BF2C231C6E00464D33 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689BE2C231C6E00464D33 /* Activity.swift */; };
-		616689C12C231C8900464D33 /* SchoolUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689C02C231C8900464D33 /* SchoolUser.swift */; };
+		616689C12C231C8900464D33 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616689C02C231C8900464D33 /* Teacher.swift */; };
 		6192F1B42C2B06E800177EA0 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192F1B32C2B06E800177EA0 /* Navigation.swift */; };
 		61A97B922C29AD7300E2A55C /* AppleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A97B912C29AD7300E2A55C /* AppleUser.swift */; };
 		950239642C3040080096E06F /* MuralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950239632C3040080096E06F /* MuralView.swift */; };
 		950239662C30401E0096E06F /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950239652C30401E0096E06F /* AnnouncementCardView.swift */; };
+
 		95414EC62C32D6F900479FB5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414EC52C32D6F900479FB5 /* ProfileView.swift */; };
 		95414EC82C34337800479FB5 /* ClassroomProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414EC72C34337800479FB5 /* ClassroomProfileCardView.swift */; };
 		95414ECA2C3433A000479FB5 /* SchoolUserInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414EC92C3433A000479FB5 /* SchoolUserInfoCardView.swift */; };
@@ -36,6 +37,7 @@
 		95414ECE2C34345300479FB5 /* MuralSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414ECD2C34345300479FB5 /* MuralSegmentedControlView.swift */; };
 		95414ED02C34349300479FB5 /* DayMealMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414ECF2C34349300479FB5 /* DayMealMenuView.swift */; };
 		95414ED22C3434CD00479FB5 /* MealMenuCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414ED12C3434CD00479FB5 /* MealMenuCardView.swift */; };
+		95414EC62C32D6F900479FB5 /* LoggedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95414EC52C32D6F900479FB5 /* LoggedProfileView.swift */; };
 		957233512C2D9EAF00004F57 /* MealMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957233502C2D9EAF00004F57 /* MealMenuView.swift */; };
 		9577482E2C29954F0067ADE8 /* ContentSplitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9577482D2C29954F0067ADE8 /* ContentSplitViewModel.swift */; };
 		957748302C2998270067ADE8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9577482F2C2998270067ADE8 /* MainViewModel.swift */; };
@@ -71,11 +73,12 @@
 		616689BA2C231C1500464D33 /* ActivityDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDiary.swift; sourceTree = "<group>"; };
 		616689BC2C231C5900464D33 /* FoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenu.swift; sourceTree = "<group>"; };
 		616689BE2C231C6E00464D33 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		616689C02C231C8900464D33 /* SchoolUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUser.swift; sourceTree = "<group>"; };
+		616689C02C231C8900464D33 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		6192F1B32C2B06E800177EA0 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		61A97B912C29AD7300E2A55C /* AppleUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleUser.swift; sourceTree = "<group>"; };
 		950239632C3040080096E06F /* MuralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralView.swift; sourceTree = "<group>"; };
 		950239652C30401E0096E06F /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
+
 		95414EC52C32D6F900479FB5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		95414EC72C34337800479FB5 /* ClassroomProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomProfileCardView.swift; sourceTree = "<group>"; };
 		95414EC92C3433A000479FB5 /* SchoolUserInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUserInfoCardView.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		95414ECD2C34345300479FB5 /* MuralSegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralSegmentedControlView.swift; sourceTree = "<group>"; };
 		95414ECF2C34349300479FB5 /* DayMealMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMealMenuView.swift; sourceTree = "<group>"; };
 		95414ED12C3434CD00479FB5 /* MealMenuCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMenuCardView.swift; sourceTree = "<group>"; };
+		95414EC52C32D6F900479FB5 /* LoggedProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedProfileView.swift; sourceTree = "<group>"; };
 		957233502C2D9EAF00004F57 /* MealMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMenuView.swift; sourceTree = "<group>"; };
 		9577482D2C29954F0067ADE8 /* ContentSplitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSplitViewModel.swift; sourceTree = "<group>"; };
 		9577482F2C2998270067ADE8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -176,7 +180,7 @@
 				616689BA2C231C1500464D33 /* ActivityDiary.swift */,
 				616689BC2C231C5900464D33 /* FoodMenu.swift */,
 				616689BE2C231C6E00464D33 /* Activity.swift */,
-				616689C02C231C8900464D33 /* SchoolUser.swift */,
+				616689C02C231C8900464D33 /* Teacher.swift */,
 				61A97B912C29AD7300E2A55C /* AppleUser.swift */,
 			);
 			path = Models;
@@ -238,6 +242,7 @@
 				95414EC72C34337800479FB5 /* ClassroomProfileCardView.swift */,
 				95414EC92C3433A000479FB5 /* SchoolUserInfoCardView.swift */,
 				95414ECB2C3433C000479FB5 /* CalendarProfileCardView.swift */,
+				95414EC52C32D6F900479FB5 /* LoggedProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -412,7 +417,7 @@
 				616689912C21C97A00464D33 /* ContentView.swift in Sources */,
 				616689A62C21CC0C00464D33 /* LoginProfileView.swift in Sources */,
 				61A97B922C29AD7300E2A55C /* AppleUser.swift in Sources */,
-				616689C12C231C8900464D33 /* SchoolUser.swift in Sources */,
+				616689C12C231C8900464D33 /* Teacher.swift in Sources */,
 				6166898F2C21C97A00464D33 /* babyStepsApp.swift in Sources */,
 				95D7A36D2C24748C00C1F4A7 /* DetailView.swift in Sources */,
 				95D7A35E2C23001900C1F4A7 /* Main.swift in Sources */,
@@ -425,6 +430,7 @@
 				616689AD2C22FEBC00464D33 /* new.swift in Sources */,
 				95414ECA2C3433A000479FB5 /* SchoolUserInfoCardView.swift in Sources */,
 				95414EC62C32D6F900479FB5 /* ProfileView.swift in Sources */,
+				95414EC62C32D6F900479FB5 /* LoggedProfileView.swift in Sources */,
 				6192F1B42C2B06E800177EA0 /* Navigation.swift in Sources */,
 				95D7A3682C2471F900C1F4A7 /* MockData.swift in Sources */,
 				6149A9EF2C24694B00AFF5B1 /* CloudKitManager.swift in Sources */,
