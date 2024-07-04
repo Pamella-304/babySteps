@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct MealMenuView: View {
+    let viewModel = MealMenuViewModel()
+
     var body: some View {
         ScrollView {
         VStack(spacing: 30) {
