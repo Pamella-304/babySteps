@@ -19,7 +19,6 @@ struct LoginProfileView: View {
 
         VStack{
             if viewModel.isLoggedIn {
-                //LoggedProfileView(viewModel: viewModel)
                 
                 VStack {
                     VStack(spacing: 15) {
@@ -38,14 +37,7 @@ struct LoginProfileView: View {
                         
                         Text(viewModel.teacherName)
                             .font(.system(.title2, design: .rounded))
-                            //                            .fontWeight(.regular)
-//                        Text("\(viewModel.teacher?.firstName ?? "Nao há first Name") \(viewModel.teacher?.lastName ?? "")")
-//                            .font(.system(.title, design: .rounded))
-//                            .bold()
-
-//                        Text(viewModel.teacher?.email ?? "")
-//                            .font(.system(.title2, design: .rounded))
-//                            .fontWeight(.regular)
+                          
                     }
 
                     VStack(alignment: .leading) {
@@ -77,13 +69,7 @@ struct LoginProfileView: View {
                             Section {
                                 
                                 Text("lista aqui")
-        //                        List {
-        //                            ForEach(viewModel.teacher!.announcements, id: \.self) { announcement in
-        //                                Text(announcement.title)
-        //                                .font(.system(.body, design: .rounded, weight: .regular))
-        //                                                        }
-        //                        }.frame(width: .infinity)
-        //                        .listRowSpacing(10)
+      
 
                             } header: {
                                 HStack(alignment: .bottom) {

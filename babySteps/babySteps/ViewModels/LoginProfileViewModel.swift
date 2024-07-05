@@ -13,7 +13,6 @@ import Combine
 class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     
     let appUser = TeacherAppUser.shared
-//    @Environment(\.colorScheme) var colorScheme
     
     var teacherName: String {
         appUser.teacher?.firstName ?? "-"
