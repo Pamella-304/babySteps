@@ -12,6 +12,12 @@ import Combine
 @Observable
 class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     
+    let appUser = TeacherAppUser.shared
+    
+    var teacherName: String {
+        appUser.teacher?.firstName ?? "-"
+    }
+
     var isLoggedIn = false
     var showAlert = false
     var teacher: Teacher?
@@ -20,7 +26,7 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
     override init() {
         self.isLoggedIn = false
         self.showAlert = false
-        self.teacher = Teacher()
+  //     self.teacher = Teacher()
         self.alertMessage = ""
     }
     
@@ -55,27 +61,22 @@ class LoginProfileViewModel: NSObject, ASAuthorizationControllerDelegate {
                         firstName: firstName,
                         lastName: lastName,
                         authID: userId,
-                        roomClasses: [],
-                        announcements: [],
-                        chatMessages: [],
-                        activities: [],
+                        roomClasses: nil,
+                        announcements: nil,
+                        chatMessages: nil,
+                        activities: nil,
                         email: email,
                         userName: "\(firstName) \(lastName)",
-                        students: []
+                        students: nil
                     )
-                    
-                    //print(teacher)
+                    print("variavel teacher")
+                    print(teacher)
+                
+                appUser.teacher = teacher
+                    self.isLoggedIn = true
+                    print("variavel teacherAppUser")
                     // Salvar no iCloud
                     CloudKitManager.shared.saveTeacher(teacher: teacher)
-                    
-                    DispatchQueue.main.async {
-                        self.teacher = teacher
-                        print("self.teacher:")
-                        print(self.teacher)
-                        self.isLoggedIn = true
-                        print(self.isLoggedIn)
-                    }
-               
             default:
                 break
             }

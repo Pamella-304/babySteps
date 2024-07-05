@@ -11,10 +11,16 @@ import SwiftUI
 struct babyStepsApp: App {
     @Environment(\.colorScheme) var colorScheme
 
+    @State var teacherAppUser = TeacherAppUser.shared
+    
     var body: some Scene {
         WindowGroup {
-            Main()
-           // LoginProfileView()
+            //Main()
+            LoginProfileView()
+                
+
+
+        
         }
     }
 }
