@@ -93,11 +93,29 @@ class CloudKitManager {
         record["userName"] = teacher.userName as CKRecordValue
         
         // Você pode serializar os arrays em strings ou CKReferences, conforme necessário
-        record["roomClasses"] = teacher.roomClasses.map { $0.id } as CKRecordValue
-        record["announcements"] = teacher.announcements.map { $0.id } as CKRecordValue
-        record["chatMessages"] = teacher.chatMessages as CKRecordValue
-        record["activities"] = teacher.activities.map { $0.id } as CKRecordValue
-        record["students"] = teacher.students.map { $0.id } as CKRecordValue
+        
+        if let roomClasses = teacher.roomClasses {
+                    record["roomClasses"] = roomClasses as CKRecordValue
+        }
+        
+        if let announcements = teacher.announcements {
+            record["announcements"] = announcements as CKRecordValue
+        }
+        if let chatMessages = teacher.chatMessages {
+            record["chatMessages"] = chatMessages as CKRecordValue
+        }
+        if let activities = teacher.activities {
+            record["activities"] = activities as CKRecordValue
+        }
+        if let students = teacher.students {
+            record["students"] = students as CKRecordValue
+        }
+        
+//        record["roomClasses"] = teacher.roomClasses.map { $0.id } as CKRecordValue
+//        record["announcements"] = teacher.announcements.map { $0.id } as CKRecordValue
+//        record["chatMessages"] = teacher.chatMessages as CKRecordValue
+//        record["activities"] = teacher.activities.map { $0.id } as CKRecordValue
+//        record["students"] = teacher.students.map { $0.id } as CKRecordValue
         
         publicDatabase.save(record) { record, error in
             if let error = error {

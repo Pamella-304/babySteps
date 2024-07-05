@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+
+
 struct DetailView: View {
 
 
@@ -20,7 +23,7 @@ struct DetailView: View {
                 case .chat:
                     EmptyView()
                 case .perfil:
-                    LoggedProfileView()
+                    LoginProfileView()
                 case .turma(let className):
                     StudentDiaryView()
                 case .none:
